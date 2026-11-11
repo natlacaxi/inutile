@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 + 1, par tous les moyens</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <h1>1 + 1&nbsp;=&nbsp;<span id="big">?</span></h1>
+  <p>Ce site calcule la même addition dans tous les paradigmes de programmation. Le résultat ne change jamais. C’est le but.</p>
+  <button id="go" type="button">Calculer pour rien</button>
+  <p id="verdict" role="status"></p>
+</header>
+
+<main>
+  <section aria-labelledby="t1">
+    <h2 id="t1">Les paradigmes (JavaScript)</h2>
+    <ol id="modes" class="grid"></ol>
+  </section>
+
+  <section aria-labelledby="t3">
+    <h2 id="t3">Le relais : tous les langages se parlent</h2>
+    <p>« 1+1 » part du navigateur, traverse chaque langage installé sur la machine par des tubes Unix, puis revient. Chacun ajoute son nom au passage.</p>
+    <button id="relais" type="button">Lancer le relais</button>
+    <ol id="chaine" class="chaine" aria-live="polite"></ol>
+    <p id="retour" role="status"></p>
+    <ul id="ignores" class="ignores"></ul>
+  </section>
+
+  <section aria-labelledby="t2">
+    <h2 id="t2">Les langages</h2>
+    <ul class="grid langs">
+      <li><h3>HTML</h3><p>La structure de cette page.</p></li>
+      <li><h3>CSS</h3><p>Le papier millimétré, en responsive.</p></li>
+      <li><h3>JavaScript</h3><p>Les 15 façons de répondre 2.</p></li>
+      <li><h3>Python</h3><p>Sert la page et une réponse inutile.<br><button type="button" data-api="py">Demander à Python</button><output id="py"></output></p></li>
+      <li><h3>Kotlin</h3><p>A fabriqué les excuses du fichier <code>data/rien.json</code>.<br><button type="button" data-api="kt">Lire le Kotlin</button><output id="kt"></output></p></li>
+      <li><h3>Shell</h3><p><code>./run.sh</code> compile, lance et prie.</p></li>
+    </ul>
+  </section>
+</main>
+<footer><p>Inutilité cumulée : <strong id="count">0</strong> addition(s) pour rien.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
